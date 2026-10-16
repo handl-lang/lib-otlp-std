@@ -7,9 +7,11 @@ license.workspace = true
 repository.workspace = true
 
 [dependencies]
-handl-value = { path = "../handl-value" }
-handl-plugin-lib-handl = { path = "../plugin-lib-handl" }
-handl-platform = { workspace = true }
+# ADR-0128 Phase 4: platform crates are git deps; the workspace-root
+# `[patch]` resolves them from the sibling `../platform` checkout.
+handl-value = { git = "https://github.com/handl-lang/platform", rev = "59765334d5088dd9948041458a24420e6a65856b" }
+handl-plugin-lib-handl = { git = "https://github.com/handl-lang/platform", rev = "59765334d5088dd9948041458a24420e6a65856b" }
+handl-platform = { git = "https://github.com/handl-lang/platform", rev = "59765334d5088dd9948041458a24420e6a65856b" }
 serde_json = "1"
-handl-plugin-lib-otlp.workspace = true
+handl-plugin-lib-otlp = { path = "../lib-otlp" }
 ureq = "2"
