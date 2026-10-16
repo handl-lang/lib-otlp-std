@@ -9,9 +9,9 @@ repository.workspace = true
 [dependencies]
 # ADR-0128 Phase 4: platform crates are git deps; the workspace-root
 # `[patch]` resolves them from the sibling `../platform` checkout.
-handl-value = { git = "https://github.com/handl-lang/platform", rev = "59765334d5088dd9948041458a24420e6a65856b" }
-handl-plugin-lib-handl = { git = "https://github.com/handl-lang/platform", rev = "59765334d5088dd9948041458a24420e6a65856b" }
-handl-platform = { git = "https://github.com/handl-lang/platform", rev = "59765334d5088dd9948041458a24420e6a65856b" }
+handl-value = { git = "https://github.com/handl-lang/platform", rev = "9d34281cc717e007588e31a0f908ef55c81e7deb" }
+handl-plugin-lib-handl = { git = "https://github.com/handl-lang/platform", rev = "9d34281cc717e007588e31a0f908ef55c81e7deb" }
+handl-platform = { git = "https://github.com/handl-lang/platform", rev = "9d34281cc717e007588e31a0f908ef55c81e7deb" }
 serde_json = "1"
 handl-plugin-lib-otlp = { path = "../lib-otlp" }
 ureq = "2"
