@@ -195,17 +195,6 @@ handl-lib-utils = { path = "../lib-utils" }
 handl-plugin-lib-otlp-std = { path = "../lib-otlp-std" }
 
 [patch."https://github.com/handl-lang/host"]
-handl-kit-arrow-lower = { path = "../host/crates/handl-kit-arrow-lower" }
-handl-kit-data = { path = "../host/crates/handl-kit-data" }
-handl-platform = { path = "../host/crates/platform" }
-handl-plugin-ext-diag = { path = "../host/crates/plugin-ext-diag" }
-handl-plugin-lib-handl = { path = "../host/crates/plugin-lib-handl" }
-handl-plugin-lib-tag = { path = "../host/crates/plugin-lib-tag" }
-handl-plugin-module = { path = "../host/crates/plugin-module" }
-handl-runtime = { path = "../host/crates/handl-runtime" }
-handl-test-utils = { path = "../host/crates/handl-test-utils" }
-
-[patch."https://github.com/handl-lang/stdlib"]
 handl-plugin-lib-char-native = { path = "../lib-char-native" }
 handl-plugin-lib-crypto = { path = "../lib-crypto" }
 handl-plugin-lib-kv = { path = "../lib-kv" }
@@ -216,4 +205,14 @@ handl-plugin-lib-lang-lex = { path = "../lib-lang-lex" }
 handl-plugin-lib-lang-parse = { path = "../lib-lang-parse" }
 handl-plugin-lib-lang-run-compiled = { path = "../lib-lang-run-compiled" }
 handl-plugin-lib-lang-typecheck = { path = "../lib-lang-typecheck" }
-handl-plugin-lib-stdlib = { path = "../stdlib/crates/plugin-lib-stdlib" }
+handl-plugin-lib-stdlib = { path = "../host/crates/plugin-lib-stdlib" }
+handl-kit-arrow-lower = { path = "../host/crates/handl-kit-arrow-lower" }
+handl-kit-data = { path = "../host/crates/handl-kit-data" }
+handl-platform = { path = "../host/crates/platform" }
+handl-plugin-ext-diag = { path = "../host/crates/plugin-ext-diag" }
+handl-plugin-lib-handl = { path = "../host/crates/plugin-lib-handl" }
+handl-plugin-lib-tag = { path = "../host/crates/plugin-lib-tag" }
+handl-plugin-module = { path = "../host/crates/plugin-module" }
+handl-runtime = { path = "../host/crates/handl-runtime" }
+handl-test-utils = { path = "../host/crates/handl-test-utils" }
+
