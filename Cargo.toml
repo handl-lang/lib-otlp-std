@@ -68,8 +68,8 @@ handl-value = { path = "../kernel/crates/handl-value" }
 [patch."https://github.com/handl-lang/kit-canonical"]
 handl-kit-canonical = { path = "../kit-canonical/crates/kit-canonical" }
 
-[patch."https://github.com/handl-lang/lang"]
-handl-kit-data-canonical = { path = "../lang/crates/handl-kit-data-canonical" }
+[patch."https://github.com/handl-lang/kit-data-canonical"]
+handl-kit-data-canonical = { path = "../kit-data-canonical/crates/handl-kit-data-canonical" }
 
 [patch."https://github.com/handl-lang/lib-archive"]
 handl-lib-archive = { path = "../lib-archive" }
