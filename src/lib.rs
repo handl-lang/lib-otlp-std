@@ -32,7 +32,7 @@ pub use http_state::{HttpOtlpState, std_otlp_module};
 /// The handl source declaring the otlp-std `handl` bindings — the
 /// implementation-side declarations for the OTLP ops. Loaded at compile
 /// time from the kit-stdlib data dir.
-const OTLP_STD_HNL: &str = include_str!("../../../handl-packages/otlp_std/otlp_std.hnl");
+const OTLP_STD_HNL: &str = include_str!("../handl-packages/otlp_std/otlp_std.hnl");
 
 /// Build the [`OpRegistry`](handl_plugin_lib_handl::OpRegistry) for
 /// otlp-std, registering the Rust handls (wrapping [`HttpOtlpState`])
