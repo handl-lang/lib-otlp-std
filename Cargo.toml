@@ -13,7 +13,7 @@ handl-value = { git = "https://github.com/handl-lang/kernel", branch = "main" }
 handl-plugin-lib-handl = { git = "https://github.com/handl-lang/host", branch = "main" }
 handl-platform = { git = "https://github.com/handl-lang/host", branch = "main" }
 serde_json = "1"
-handl-plugin-lib-otlp = { git = "https://github.com/handl-lang/lib-otlp", branch = "main" }
+handl-plugin-lib-otlp-c = { git = "https://github.com/handl-lang/lib-otlp-c", branch = "main" }
 ureq = "2"
 
 [patch."https://github.com/handl-lang/engine"]
@@ -138,7 +138,7 @@ handl-lib-ops = { path = "../kernel/crates/ops" }
 handl-lib-option = { path = "../lib-option" }
 
 [patch."https://github.com/handl-lang/lib-otlp"]
-handl-plugin-lib-otlp = { path = "../lib-otlp" }
+handl-plugin-lib-otlp-c = { path = "../lib-otlp-c" }
 
 [patch."https://github.com/handl-lang/lib-parse"]
 handl-lib-parse = { path = "../lib-parse" }

@@ -8,7 +8,7 @@
 //! declared in `handl-packages/otlp_std/otlp_std.hnl`. The Rust handls
 //! (wrapping [`HttpOtlpState`]) are registered in an [`OpRegistry`] via
 //! [`otlp_std_op_registry`], which delegates to the shared
-//! [`otlp_op_registry`](handl_plugin_lib_otlp::otlp_op_registry) builder.
+//! [`otlp_op_registry`](handl_plugin_lib_otlp_c::otlp_op_registry) builder.
 //! The [`OtlpStdLibraryPlugin`] wraps the generic [`HandlLibraryPlugin`]
 //! with the op registry, eliminating the per-library `Plugin` trait
 //! scaffolding.
@@ -21,9 +21,9 @@ mod http_state;
 use std::sync::Arc;
 
 use handl_plugin_lib_handl::HandlLibraryPlugin;
-use handl_plugin_lib_otlp::{OTLP_OPS, OtlpState, otlp_op_registry};
+use handl_plugin_lib_otlp_c::{OTLP_OPS, OtlpState, otlp_op_registry};
 
-pub use handl_plugin_lib_otlp::{
+pub use handl_plugin_lib_otlp_c::{
     MetricKind, MetricOptions, OtlpConfig, OtlpError, OtlpEvent, OtlpModule, OtlpResult,
     RecordedEvent, RecordedSpan, StartSpanOptions, StubOtlpState,
 };
@@ -61,7 +61,7 @@ impl OtlpStdLibraryPlugin {
         let registry = Arc::new(otlp_std_op_registry());
         Self {
             inner: HandlLibraryPlugin::new_with_caps(
-                "otlp",
+                "otlp_c",
                 "lib.otlp-std",
                 "lib-otlp-std",
                 OTLP_STD_HNL,

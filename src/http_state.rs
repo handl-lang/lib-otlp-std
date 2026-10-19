@@ -3,7 +3,7 @@ use std::sync::{Arc, Mutex};
 
 use serde_json::{Value, json};
 
-use handl_plugin_lib_otlp::{
+use handl_plugin_lib_otlp_c::{
     MetricKind, MetricOptions, OtlpConfig, OtlpError, OtlpResult, OtlpState, StartSpanOptions, id,
 };
 
@@ -404,7 +404,7 @@ fn send_metrics_payload(config: &OtlpConfig, metrics: &[MetricRecord]) -> OtlpRe
 }
 
 /// Create a preconfigured `otlp` module using [`HttpOtlpState`].
-pub fn std_otlp_module() -> handl_plugin_lib_otlp::OtlpModule {
+pub fn std_otlp_module() -> handl_plugin_lib_otlp_c::OtlpModule {
     let state: Arc<dyn OtlpState> = Arc::new(HttpOtlpState::new());
-    handl_plugin_lib_otlp::OtlpModule::new(state)
+    handl_plugin_lib_otlp_c::OtlpModule::new(state)
 }
