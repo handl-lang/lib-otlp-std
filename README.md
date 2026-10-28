@@ -4,3 +4,7 @@
 
 Sibling-repo deps are git dependencies (`branch = "main"`); `[patch]` tables
 resolve them from sibling checkouts.
+
+## License
+
+MIT.
