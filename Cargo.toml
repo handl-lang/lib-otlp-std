@@ -53,8 +53,6 @@ hnl-engine-typecheck = { path = "../engine-typecheck" }
 handl-language = { path = "../kernel/crates/handl-language" }
 handl-value = { path = "../kernel/crates/handl-value" }
 
-[patch."https://github.com/handl-lang/lib-char"]
-handl-lib-char = { path = "../lib-char" }
 
 [patch."https://github.com/handl-lang/lib-otlp"]
 handl-plugin-lib-otlp-c = { path = "../lib-otlp-c" }
