@@ -3,8 +3,10 @@ name = "handl-plugin-lib-otlp-std"
 version = "0.1.0"
 edition = "2024"
 description = "Concrete OTLP/HTTP exporter using `ureq`."
-license = "MIT OR Apache-2.0"
+license = "MIT"
 repository = "https://github.com/handl-lang/lib-otlp-std"
+homepage = "https://github.com/handl-lang/lib-otlp-std"
+readme = "README.md"
 
 [dependencies]
 handl-ops = { git = "https://github.com/handl-lang/kernel", branch = "main" }

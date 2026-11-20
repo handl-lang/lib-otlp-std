@@ -1,9 +1,34 @@
 # lib-otlp-std
 
-`handl-plugin-lib-otlp-std` — Concrete OTLP/HTTP exporter using `ureq`.
+`handl-plugin-lib-otlp-std` — concrete OTLP/HTTP exporter using `ureq`.
 
-Sibling-repo deps are git dependencies (`branch = "main"`); `[patch]` tables
-resolve them from sibling checkouts.
+Ships both the `handl-packages/otlp_std` .hnl package and the Rust plugin
+crate under `src/`.
+
+## Layout
+
+```text
+handl-packages/otlp_std/   the .hnl package
+src/                      the Rust plugin crate
+ci.sh                     bupha entry → scripts/hnl-gate.sh
+```
+
+## Gate
+
+```bash
+HNL=../host-cli/target/debug/hnl scripts/hnl-gate.sh
+./ci.sh                # full gate (bupha entry)
+```
+
+## Development
+
+```bash
+cargo xtask gate        # fmt --check → clippy -D warnings → test → doc
+```
+
+`cargo xtask` wraps the repo's `xtask/` crate (`fmt`, `clippy`, `test`, `doc`,
+`check`, `gate`). Deps resolve from git, so no sibling checkouts are needed;
+a plain clone test-runs as-is.
 
 ## License
 
