@@ -7,83 +7,15 @@ license = "MIT OR Apache-2.0"
 repository = "https://github.com/handl-lang/lib-otlp-std"
 
 [dependencies]
-# ADR-0128 Phase 4: platform crates are git deps; the workspace-root
-# `[patch]` resolves them from the sibling `../host` checkout.
+handl-ops = { git = "https://github.com/handl-lang/kernel", branch = "main" }
 handl-value = { git = "https://github.com/handl-lang/kernel", branch = "main" }
-handl-plugin-lib-handl = { git = "https://github.com/handl-lang/host", branch = "main" }
-handl-platform = { git = "https://github.com/handl-lang/host", branch = "main" }
 serde_json = "1"
 handl-plugin-lib-otlp-c = { git = "https://github.com/handl-lang/lib-otlp-c", branch = "main" }
 ureq = "2"
 
-[patch."https://github.com/handl-lang/engine"]
-hnl-engine = { path = "../engine" }
-
-[patch."https://github.com/handl-lang/engine-exec"]
-hnl-engine-exec = { path = "../engine-exec" }
-
-[patch."https://github.com/handl-lang/engine-exec-bytecode"]
-hnl-engine-exec-bytecode = { path = "../engine-exec-bytecode" }
-
-[patch."https://github.com/handl-lang/engine-exec-tree-walk"]
-hnl-engine-exec-tree-walk = { path = "../engine-exec-tree-walk" }
-
-[patch."https://github.com/handl-lang/engine-lex"]
-hnl-engine-lex = { path = "../engine-lex" }
-
-[patch."https://github.com/handl-lang/engine-lex-pattern"]
-hnl-engine-lex-pattern = { path = "../engine-lex-pattern" }
-
-[patch."https://github.com/handl-lang/engine-parse"]
-hnl-engine-parse = { path = "../engine-parse" }
-
-[patch."https://github.com/handl-lang/engine-parse-pratt"]
-hnl-engine-parse-pratt = { path = "../engine-parse-pratt" }
-
-[patch."https://github.com/handl-lang/engine-transform"]
-hnl-engine-transform = { path = "../engine-transform" }
-
-[patch."https://github.com/handl-lang/engine-transform-rewrite"]
-hnl-engine-transform-rewrite = { path = "../engine-transform-rewrite" }
-
-[patch."https://github.com/handl-lang/engine-typecheck"]
-hnl-engine-typecheck = { path = "../engine-typecheck" }
-
 [patch."https://github.com/handl-lang/kernel"]
-handl-language = { path = "../kernel/crates/handl-language" }
+handl-ops = { path = "../kernel/crates/handl-ops" }
 handl-value = { path = "../kernel/crates/handl-value" }
-
-
-[patch."https://github.com/handl-lang/lib-otlp"]
-handl-plugin-lib-otlp-c = { path = "../lib-otlp-c" }
-
-[patch."https://github.com/handl-lang/lib-str-handl"]
-handl-lib-str-handl = { path = "../lib-str-handl" }
-
-[patch."https://github.com/handl-lang/otlp"]
-handl-plugin-lib-otlp-std = { path = "../lib-otlp-std" }
-
-[patch."https://github.com/handl-lang/host"]
-handl-plugin-lib-char-native = { path = "../lib-char-native" }
-handl-kit-arrow-lower = { path = "../host/crates/handl-kit-arrow-lower" }
-handl-platform = { path = "../host/crates/platform" }
-handl-plugin-ext-diag = { path = "../host/crates/plugin-ext-diag" }
-handl-plugin-lib-handl = { path = "../host/crates/plugin-lib-handl" }
-handl-plugin-module = { path = "../host/crates/plugin-module" }
-handl-runtime = { path = "../host/crates/handl-runtime" }
-
-[patch."https://github.com/handl-lang/lib-char-native"]
-handl-plugin-lib-char-native = { path = "../lib-char-native" }
-
-[patch."https://github.com/handl-lang/lib-desugar"]
-handl-lib-desugar = { path = "../lib-desugar" }
-
-[patch."https://github.com/handl-lang/lib-loader"]
-handl-lib-loader = { path = "../lib-loader" }
 
 [patch."https://github.com/handl-lang/lib-otlp-c"]
 handl-plugin-lib-otlp-c = { path = "../lib-otlp-c" }
-
-[patch."https://github.com/handl-lang/lib-otlp-std"]
-handl-plugin-lib-otlp-std = { path = "../lib-otlp-std" }
-

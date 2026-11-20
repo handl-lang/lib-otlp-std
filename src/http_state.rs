@@ -1,5 +1,5 @@
 use std::collections::HashMap;
-use std::sync::{Arc, Mutex};
+use std::sync::Mutex;
 
 use serde_json::{Value, json};
 
@@ -401,10 +401,4 @@ fn send_metrics_payload(config: &OtlpConfig, metrics: &[MetricRecord]) -> OtlpRe
 
     let url = format!("{}/v1/metrics", config.endpoint.trim_end_matches('/'));
     post_json(config, &url, &payload)
-}
-
-/// Create a preconfigured `otlp` module using [`HttpOtlpState`].
-pub fn std_otlp_module() -> handl_plugin_lib_otlp_c::OtlpModule {
-    let state: Arc<dyn OtlpState> = Arc::new(HttpOtlpState::new());
-    handl_plugin_lib_otlp_c::OtlpModule::new(state)
 }
