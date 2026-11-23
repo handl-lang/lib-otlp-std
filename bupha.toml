@@ -6,7 +6,7 @@
 
 [[repos]]
 name = "handl-lang/lib-otlp-std"
-dir = "/home/luis/GitHub/handl-lang/lib-otlp-std"
+dir = "~//GitHub/handl-lang/lib-otlp-std"
 branch = "refs/heads/main"
   [repos.runner]
   kind = "script"
