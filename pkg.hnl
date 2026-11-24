@@ -1,0 +1,13 @@
+-- lib-otlp-std: the `otlp_std` module — concrete OTLP/HTTP exporter
+-- backend for `lib-otlp` using `ureq`. Transitional layout: the .hnl
+-- surface is `handl-packages/otlp_std/otlp_std.hnl`; the impl is the
+-- `handl-plugin-lib-otlp-std` crate under `src/`.
+{
+  deps: { otlp: "branch:main" },
+  modules: ["otlp_std"],
+  name: "otlp_std",
+  description: "OTLP/HTTP exporter backend for the otlp contract via ureq — spans, logs, metrics over HTTP.",
+  license: "MIT",
+  keywords: ["otlp", "telemetry", "http", "backend", "handl"],
+  homepage: "https://github.com/handl-lang/lib-otlp-std",
+}
