@@ -11,7 +11,7 @@ for `lib-otlp` using `ureq`: spans, logs, metrics over HTTP.
 | `src/http_state.rs` | `HttpOtlpState` — the ureq-backed exporter state |
 | `handl-packages/otlp_std/` | the `otlp_std.*` .hnl surface |
 | `Cargo.toml`, `xtask/` | crate manifest + `cargo xtask` gate |
-| `pkg.hnl`, `scripts/hnl-gate.sh`, `ci.sh` | manifest / hnl gate / bupha entry |
+| `pkg.hnl`, `scripts/hnl-gate.sh`, `workflows/gate.yaml` | manifest / hnl gate / bupha entry |
 
 ## Contract
 
