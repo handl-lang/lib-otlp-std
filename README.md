@@ -10,14 +10,14 @@ crate under `src/`.
 ```text
 handl-packages/otlp_std/   the .hnl package
 src/                      the Rust plugin crate
-ci.sh                     bupha entry → scripts/hnl-gate.sh
+workflows/gate.yaml                     bupha entry (handl-gates) → scripts/hnl-gate.sh
 ```
 
 ## Gate
 
 ```bash
 HNL=../host-cli/target/debug/hnl scripts/hnl-gate.sh
-./ci.sh                # full gate (bupha entry)
+cargo xtask gate  # full gate (bupha entry)
 ```
 
 ## Development
