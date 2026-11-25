@@ -2,6 +2,7 @@
 name = "handl-plugin-lib-otlp-std"
 version = "0.1.0"
 edition = "2024"
+rust-version = "1.85"
 description = "Concrete OTLP/HTTP exporter using `ureq`."
 license = "MIT"
 repository = "https://github.com/handl-lang/lib-otlp-std"
