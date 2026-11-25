@@ -5,7 +5,7 @@
 {
   deps: { otlp: "branch:main" },
   modules: ["otlp_std"],
-  name: "otlp_std",
+  name: "otlp-std",
   description: "OTLP/HTTP exporter backend for the otlp contract via ureq — spans, logs, metrics over HTTP.",
   license: "MIT",
   keywords: ["otlp", "telemetry", "http", "backend", "handl"],
